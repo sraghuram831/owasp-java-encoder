@@ -13,7 +13,7 @@ phases:
       - mvn install
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed on `path`
 artifacts:
   files:
-    - target/encoder-esapi-1.2.3-javadoc.jar
+    encoder-esapi-1.2.3-javadoc.jar
