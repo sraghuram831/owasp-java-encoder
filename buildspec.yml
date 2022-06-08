@@ -14,5 +14,5 @@ phases:
   post_build:
    artifacts:
   files:
-    - '**/*'
+     '**/*'
 
