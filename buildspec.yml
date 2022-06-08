@@ -1,16 +1,18 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - mkdir build-output
-      - cp -R <path>/public/ build-output
+      - echo Build started on `date`
+      - mvn install
   post_build:
-    commands:
-      - mv build-output/**/* ./
-      - mv build-output/* ./
-      - rm -R build-output *.yml LICENSE README* .git*
-artifacts:
+   artifacts:
   files:
     - '**/*'
 
